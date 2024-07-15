@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'restaurant';
+    src: url('../../../assets/fonts/restaurant.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+ion-label {
+    font-family: 'cakecafe', sans-serif;
+}
+
+.lista-empleados {
+    margin-top: 20px;
+}
+
+ion-title {
+    text-align: center;
+    font-size: 4vw;
+}
+
+ion-toolbar,
+ion-title,
+ion-col,
+ion-label {
+    font-size: 3vw;
+}
+
+.iconos {
+    font-size: 6.5vw;
+    color: #ff830f;
+    overflow: visible;
+}
+
+.iconos ion-icon {
+    font-size: 1.5vw;
+    color: #ff830f;
+    overflow: visible;
+}
+
+p.mostrar-abajo {
+    display: block;
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    /* Ajusta la posición vertical según tus necesidades */
+    z-index: 1;
+}
+
+.itemUser {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dark-theme .itemUser {
+    background-color: #333;
+    /* Cambia el color de fondo en modo oscuro si es necesario */
+}
+
+.color-salir {
+    color: #ff830f;
+}
+
+/* Estilo para el botón de filtro */
+.btnFiltro {
+    margin-left: 98px;
+    border-radius: 15px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.custom-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 38%;
+    transform: translateX(50%);
+    font-size: 12px;
+}
+
+/* Estilo específico para el modo oscuro */
+.dark-theme {
+    filter: none;
+    /* Elimino cualquier filtro aplicado al modo oscuro */
+}
+
+.dark-theme ion-col.columna,
+.dark-theme ion-text.reserva-dato {
+    color: #fff; /* Cambia el color del texto a blanco en modo oscuro */
+}
+
+/* Aplicar el estilo específico para el modo oscuro */
+.dark-theme .encabezado-col,
+.dark-theme .data-col {
+    color: #fff;
+}
+
+/* Estilo específico para el ícono en el modo oscuro */
+.dark-theme .iconos-col {
+    color: #fff;
+}

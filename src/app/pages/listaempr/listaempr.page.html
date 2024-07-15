@@ -1,0 +1,83 @@
+<ion-header [class]="isDarkMode ? 'dark-theme' : ''" *ngIf="rol === 'administrador'">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/config-empleados" style="--color: #ff830f;"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="primary" style="font-size: 20px;">Lista Empleados</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleDarkMode()">
+        <ion-icon [name]="isDarkMode ? 'sunny-outline' : 'moon-outline'" style="color: #ff830f; font-size: 22px;"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="log-out-outline" class="color-salir" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="margin-left: 5px;">
+
+  <ion-searchbar placeholder="Buscar por restaurante" (ionInput)="filtrarEmpresa('empresa', $event)"></ion-searchbar>
+  <ion-searchbar placeholder="Buscar por ciudad" (ionInput)="filtrarEmpresa('ciudad', $event)"></ion-searchbar>
+
+  <ion-row style="text-align: center; margin-left: 45px;">
+    <!-- Desplegable para filtrar por restaurantes -->
+    <ion-col size="6">
+      <ion-select (ionChange)="onEmpresaChange($event)" placeholder="Restaurantes">
+        <ion-select-option *ngFor="let empresa of empresas" [value]="empresa.id_empresa">{{ empresa.empresa }}</ion-select-option>
+      </ion-select>
+    </ion-col>
+  
+    <!-- Desplegable para filtrar por provincias -->
+    <ion-col size="6">
+      <ion-select (ionChange)="onProvinciaChange($event)" placeholder="Provincias">
+        <ion-select-option *ngFor="let provincia of provincias" [value]="provincia.provincia">{{ provincia.provincia }}</ion-select-option>
+      </ion-select>
+    </ion-col>
+
+    <!-- Desplegable para filtrar por tipo de local -->
+    <ion-col size="6">
+      <ion-select (ionChange)="onTipoLocalChange($event)" placeholder="Tipo de Local">
+        <ion-select-option value="">Mostrar Todos</ion-select-option>
+        <ion-select-option value="Italiano">Italiano</ion-select-option>
+        <ion-select-option value="Mexicano">Mexicano</ion-select-option>
+        <ion-select-option value="Asiático">Asiático</ion-select-option>
+        <ion-select-option value="Mediterráneo">Mediterráneo</ion-select-option>
+        <ion-select-option value="Indio">Indio</ion-select-option>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+
+<!-- Lista de tarjetas con información de los empleados -->
+<ion-list *ngIf="rol === 'administrador'">
+  <ion-card *ngFor="let empleado of empleados; let i = index" [ngStyle]="{ 'background-color': coloresFilas[i % coloresFilas.length] }">
+    <ion-card-content>
+      <!-- Información del empleado -->
+      <ion-row>
+        <ion-label style="font-weight: bold;">NOMBRE</ion-label>
+        <p>{{ empleado.nombre }}</p>
+      </ion-row>
+
+      <ion-row>
+        <ion-label style="font-weight: bold;">APELLIDO</ion-label>
+        <p>{{ empleado.apellido }}</p>
+      </ion-row>
+
+      <ion-row>
+        <ion-label style="font-weight: bold;">CORREO ELECTRÓNICO</ion-label>
+        <p>{{ empleado.email }}</p>
+      </ion-row>
+
+      <!-- Agrega el id_user como un atributo de datos en la tarjeta -->
+      <ion-row>
+        <input type="number">{{ empleado.id_user }}
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-list>
+
+
+</ion-content>

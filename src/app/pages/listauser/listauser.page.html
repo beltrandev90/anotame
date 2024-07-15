@@ -1,0 +1,48 @@
+<ion-header [class]="isDarkMode ? 'dark-theme' : ''" *ngIf="rol === 'administrador'">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/config-empleados" style="--color: #ff830f;"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="primary" style="font-size: 20px;">Lista Empleados</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleDarkMode()">
+        <ion-icon [name]="isDarkMode ? 'sunny-outline' : 'moon-outline'"
+          style="color: #ff830f; font-size: 22px;"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="log-out-outline" class="color-salir" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-toolbar>
+    <ion-searchbar placeholder="Buscar por nombre"
+      (ionInput)="filtrarEmpleados('nombre', $event.target.value || '')"></ion-searchbar>
+    <ion-searchbar placeholder="Buscar por correo electrónico"
+      (ionInput)="filtrarEmpleados('email', $event.target.value || '')"></ion-searchbar>
+  </ion-toolbar>
+
+  <ion-list lines="none" class="lista-empleados"> 
+    
+    <ion-item class="itemUser" *ngFor="let empleado of empleadosFiltrados; let i = index" [ngClass]="{'dark-theme': isDarkMode}" [style.background-color]="coloresFilas[i % coloresFilas.length]">
+      <!-- Contenido de tu fila -->
+      <ion-label>{{ empleado.nombre }}</ion-label>
+      <ion-label>{{ empleado.email }}</ion-label>
+      <!-- <ion-buttons slot="end">
+        <ion-button fill="clear" (click)="borrarEmpleado(empleado.id_user)" [attr.data-id]="empleado.id_user">
+          <ion-icon class="iconos" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons> -->
+    </ion-item>
+    
+    
+  </ion-list>
+
+</ion-content>

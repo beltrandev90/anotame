@@ -1,0 +1,121 @@
+/* Estilos generales */
+@font-face {
+    font-family: 'restaurant';
+    src: url('../../../assets/fonts/restaurant.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Estilos para ion-toolbar */
+ion-toolbar {
+    font-size: 20px;
+}
+
+/* Estilos para el color de salida */
+.color-salir {
+    color: #ff830f;
+}
+
+/* Estilos para ion-title */
+ion-title {
+    text-align: center;
+}
+
+/* Estilos para ion-label y párrafos */
+ion-label,
+p {
+    margin-left: 20px;
+    margin-right: 40px;
+    font-family: 'cakecafe', sans-serif;
+    color: black;
+}
+
+p {
+    font-size: 17px;
+}
+
+/* Estilos para iconos en .iconos y .eye-button */
+.iconos ion-icon,
+.eye-button ion-icon {
+    font-size: 1.5vw;
+    color: #ff830f;
+    overflow: visible;
+}
+
+/* Estilos para la tabla */
+.tabla-ancha {
+    width: 100%;
+    margin: auto;
+}
+
+/* Estilos para las filas de la tabla */
+.fila-bordes {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: black !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos para el encabezado naranja */
+.encabezado-naranja {
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Estilos para columnas */
+.columna,
+.columna-cif {
+    flex: 1;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.columna-cif {
+    flex: 2;
+}
+
+/* Ajustes para mostrar texto completo en filas-bordes */
+.fila-bordes {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Estilos específicos para íconos en la tabla */
+.iconos ion-icon {
+    font-size: 1.5vw;
+    overflow: visible;
+}
+
+/* Estilos específicos para el modo oscuro */
+.dark-theme {
+    filter: none;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    ion-toolbar {
+        font-size: 3vw;
+    }
+
+    .columna,
+    .iconos {
+        flex: 1;
+        font-size: 2.5vw;
+    }
+
+    ion-icon {
+        font-size: 4vw;
+    }
+}

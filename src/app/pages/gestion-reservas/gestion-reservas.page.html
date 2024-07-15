@@ -1,0 +1,113 @@
+<ion-header [class]="isDarkMode ? 'dark-theme' : ''"
+  *ngIf="rol === 'administrador' || rol === 'encargado' || rol === 'camarero'">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" style="--color: #ff830f"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reservas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleDarkMode()">
+        <ion-icon [name]="isDarkMode ? 'sunny-outline' : 'moon-outline'"
+          style="color: #ff830f; font-size: 24px"></ion-icon>
+      </ion-button>
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="log-out-outline" class="color-salir" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="rol === 'administrador' || rol === 'encargado' || rol === 'camarero'">
+
+  <!-- Filtros de búsqueda -->
+  <ion-item>
+    <ion-label>Mes:</ion-label>
+    <ion-select placeholder="Selecciona mes" [(ngModel)]="filtroMes">
+      <ion-select-option value="01">Enero</ion-select-option>
+      <ion-select-option value="02">Febrero</ion-select-option>
+      <ion-select-option value="03">Marzo</ion-select-option>
+      <ion-select-option value="04">Abril</ion-select-option>
+      <ion-select-option value="05">Mayo</ion-select-option>
+      <ion-select-option value="06">Junio</ion-select-option>
+      <ion-select-option value="07">Julio</ion-select-option>
+      <ion-select-option value="08">Agosto</ion-select-option>
+      <ion-select-option value="09">Septiembre</ion-select-option>
+      <ion-select-option value="10">Octubre</ion-select-option>
+      <ion-select-option value="11">Noviembre</ion-select-option>
+      <ion-select-option value="12">Diciembre</ion-select-option>
+    </ion-select>
+    <ion-button *ngIf="filtroMes" (click)="borrarFiltro()" fill="clear">
+      <ion-icon name="close-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Año:</ion-label>
+    <ion-select placeholder="Selecciona año" [(ngModel)]="filtroAnio">
+      <!-- Agrega opciones para los años que desees -->
+      <ion-select-option value="2023">2023</ion-select-option>
+      <ion-select-option value="2024">2024</ion-select-option>
+      <ion-select-option value="2025">2025</ion-select-option>
+    </ion-select>
+    <ion-button *ngIf="filtroAnio" (click)="borrarFiltro()" fill="clear">
+      <ion-icon name="close-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <ion-button class="btnFiltro" (click)="aplicarFiltros()" class="custom-button" shape="round" size="small">Aplicar
+    Filtros</ion-button>
+
+  <ion-list lines="full">
+
+    <!-- Encabezados -->
+    <ion-item class="fila-bordes" style="margin-left: 18px; margin-right: 9px;">
+      <ion-row class="header-row" style="color: #ff830f;font-weight: bold;">
+        <!-- Encabezados en la primera fila -->
+        <ion-col size="3">Día&Hora</ion-col>
+        <ion-col size="3">Pax</ion-col>
+        <ion-col size="3">Notas</ion-col>
+        <ion-col size="3">Estado</ion-col>
+        <ion-col size="3">Cliente</ion-col>
+      </ion-row>
+    </ion-item>
+
+    <div *ngFor="let reserva of reservasFiltradas; let i = index">
+      <!-- Datos -->
+      <ion-item class="fila-bordes" style="margin-left: 18px; margin-right: 12px;">
+        <ion-row class="data-row">
+          <!-- Datos en la segunda fila -->
+          <ion-col class="columna" style="flex: 2; margin-right: 13px;"  [class]="isDarkMode ? 'dark-theme' : ''">
+            <ion-text class="reserva-dato">{{ formatFechaHora(reserva.fechaHoraReserva) }}</ion-text>
+          </ion-col>
+          <ion-col class="columna" style="flex: 2;" [class]="isDarkMode ? 'dark-theme' : ''">
+            <ion-text class="reserva-dato">{{ reserva.numPax }}</ion-text>
+          </ion-col>
+          <ion-col class="columna" style="flex: 2;" [class]="isDarkMode ? 'dark-theme' : ''">
+            <ion-text class="reserva-dato">{{ reserva.notasEspeciales }}</ion-text>
+          </ion-col>
+
+          <!-- Botón con ícono de estado de reserva -->
+          <ion-col class="columna" style="flex: 2;">
+            <ion-button (click)="cambiarEstadoReserva(reserva)" fill="clear" >
+              <ion-icon [name]="'ellipse'" [class]="getEstadoColor(reserva.estadoReserva)"
+                style="font-size: 12px;"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <!-- Ícono de detalles del cliente -->
+          <ion-col class="columna" style="flex: 2;">
+            <ion-icon (click)="mostrarDetallesCliente($event)" name="eye-outline"
+              style="font-size: 15px; cursor: pointer; margin-left: 5px;color: #ff830f;">
+            </ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </div>
+  </ion-list>
+
+
+  <!-- Mostrar un mensaje si no hay reservas -->
+  <div style="margin-left: 20px;" *ngIf="!reservas || reservas.length === 0">
+    No hay reservas disponibles.
+  </div>
+</ion-content>

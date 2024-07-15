@@ -1,0 +1,44 @@
+<ion-header [class]="isDarkMode ? 'dark-theme' : ''" *ngIf="rol === 'cliente'">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/homecli" style="--color: #ff830f;"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="primary">Restaurante</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleDarkMode()">
+        <ion-icon [name]="isDarkMode ? 'sunny-outline' : 'moon-outline'"
+          style="color: #ff830f; font-size: 24px;"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="log-out-outline" class="color-salir" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [class]="{'dark-theme': isDarkMode}" *ngIf="rol === 'cliente'">
+
+  <input type="hidden" #idEmpresaInput [value]="idEmpresa">
+
+  <div style="margin-left: 20px;margin-right: 18px;margin-top: 15px;">
+    
+    <!-- Mostrar el nombre local -->
+    <div *ngFor="let texto of textosFiltrados">
+      <div style="overflow-wrap: break-word; max-width: 350px; color: #ff830f;">
+        <ion-title style="font-size: 25px;">{{ texto.nomLocal }}</ion-title>
+      </div>
+  
+      <!-- Mostrar el texto con saltos de línea y espacio entre párrafos -->
+      <div style="overflow-wrap: break-word; max-width: 350px; white-space: pre-line; margin-bottom: 10px;">
+        <p class="white-text" style="font-size: 20px;">{{ texto.texto }}</p>
+      </div>
+    </div>
+  </div>
+
+  
+</ion-content>

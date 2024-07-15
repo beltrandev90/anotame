@@ -1,0 +1,50 @@
+<ion-header *ngIf="rol === 'administrador' || rol === 'encargado'">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/gestion-menu-carta" style="--color: #ff830f;"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="primary">Carta</ion-title>
+
+    <ion-buttons slot="end">
+
+      <ion-button (click)="toggleDarkMode()">
+        <ion-icon [name]="isDarkMode ? 'sunny-outline' : 'moon-outline'" style="color: #ff830f; font-size: 24px;"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="log-out-outline" class="color-salir" size="large"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="rol === 'administrador' || rol === 'encargado'" class="center-content">
+  <form [formGroup]="formCarta">
+    <br>
+
+    <input type="hidden" formControlName="id_empresa" [value]="id_empresa">
+    <input type="hidden" formControlName="id_user" [value]="id_user">
+
+    <div class="upload-row">
+      <input type="file" id="fileInput" accept="image/*" (change)="onFileSelected($event)" class="upload-input">
+      <ion-button (click)="enviarCarta()" class="upload-button">Subir Carta</ion-button>
+    </div>
+  </form>
+
+  <div class="gallery-container" style="margin-left: 10px; margin-right: 25px;">
+    <ion-card *ngFor="let carta of cartasFiltradas" class="card-container">
+      <img [src]="carta.carta_img" alt="{{ carta.carta_img }}" style="width: 100%;" />
+    
+      <ion-card-header>
+        <ion-card-title class="card-title" style="display: none;" [ngStyle]="{'color': isDarkMode ? 'white' : 'inherit'}">{{ carta.carta_img }}</ion-card-title>
+        <ion-icon name="trash-outline" (click)="borrarCarta(carta.id_carta)" size="small" class="trash-icon"></ion-icon>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,186 @@
+ion-title {
+    text-align: center;
+}
+
+.color-salir {
+    color: #ff830f;
+}
+
+.color-naranja {
+    color: #FFA500;
+}
+
+.color-verde {
+    color: #008000;
+}
+
+.color-rojo {
+    color: #FF0000;
+}
+
+.iconos ion-icon {
+    font-size: 1.2vw;
+    color: #ff830f;
+    overflow: visible;
+}
+
+/* Estilo para el botón de filtro */
+.btnFiltro {
+    margin-left: 98px;
+    border-radius: 15px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.custom-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 38%;
+    transform: translateX(50%);
+    font-size: 12px;
+}
+
+ion-item.encabezado-naranja .ion-col,
+.fila-bordes ion-col {
+    flex: 2 !important; /* Ajusta este valor según tus necesidades */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.encabezado-naranja ion-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-row,
+.data-row {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que se envuelva a la siguiente línea */
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.columna {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.fila-bordes {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+    color: black !important;
+    margin-bottom: 8px;
+}
+
+.fila-bordes ion-col {
+    flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.iconos {
+    display: flex;
+    justify-content: flex-end;
+    /* Alineo los íconos a la derecha dentro de las columnas de íconos */
+    align-items: center;
+    flex: 1;
+    /* Hago que las columnas de íconos tengan la misma flexibilidad */
+}
+
+.iconos ion-icon {
+    font-size: 1.5vw;
+    /* Establezco el tamaño de fuente para los íconos dentro de ion-icon */
+}
+
+/* Estilo específico para el modo oscuro */
+.dark-theme {
+    filter: none;
+    /* Elimino cualquier filtro aplicado al modo oscuro */
+}
+
+.estado-reserva-dot {
+    width: 20px;
+    /* Ajusto el ancho del elemento de estado de reserva */
+    height: 20px;
+    /* Ajusto la altura del elemento de estado de reserva */
+    background-size: cover;
+    /* Hago que el fondo cubra completamente el elemento */
+    border-radius: 50%;
+    /* Hago que el elemento sea un círculo */
+}
+
+ion-title {
+    font-size: 20px;
+    /* Establezco el tamaño de fuente para ion-title */
+}
+
+label {
+    font-size: 10px;
+    /* Establezco el tamaño de fuente para las etiquetas */
+    font-weight: bold;
+    /* Establezco la negrita para las etiquetas */
+    color: #ff830f;
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+    /* Establezco el tamaño de fuente para los párrafos */
+    text-align: center;
+    /* Centro el texto dentro de los párrafos */
+}
+
+.reserva-dato {
+    font-size: 15px;
+    /* Establezco el tamaño de fuente para los párrafos */
+    text-align: center;
+    /* Centro el texto dentro de los párrafos */
+}
+
+/* Agrega estas reglas para cambiar el color del texto en modo oscuro */
+.dark-theme ion-col.columna,
+.dark-theme ion-text.reserva-dato {
+    color: #fff; /* Cambia el color del texto a blanco en modo oscuro */
+}
+
+/* Estilos para las columnas de encabezados y datos */
+.encabezado-col,
+.data-col {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 13px;
+    padding-left: 4px;
+}
+
+/* Estilos para los íconos dentro de las columnas */
+.iconos-col {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Aplicar el estilo específico para el modo oscuro */
+.dark-theme .encabezado-col,
+.dark-theme .data-col {
+    color: #fff;
+}
+
+/* Estilo específico para el ícono en el modo oscuro */
+.dark-theme .iconos-col {
+    color: #fff;
+}

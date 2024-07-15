@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'restaurant';
+    src: url('./assets/fonts/restaurant.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'restaurant', sans-serif;
+}
+
+/* Modo claro */
+ion-header,
+ion-toolbar {
+    --background: #ffffff;
+    --color: #343541;
+}
+
+ion-title {
+    color: #ff830f !important;
+    /* Mantener el color naranja */
+}
+
+ion-icon[slot="icon-only"][name="menu_outline"] {
+    color: #ff830f !important;
+    /* Mantener el color naranja */
+}
+
+ion-content {
+    --background: #ffffff;
+    color: #343541;
+}
+
+.itemUser {
+    --background: #FFECBA;
+    color: #343541;
+}
+
+.itemUser ion-item,
+.itemUser ion-card {
+    --background: inherit;
+    color: inherit;
+}
+
+// ion-item,
+// ion-card {
+//     --background: #ffffff;
+//     color: #343541;
+// }
+
+ion-menu {
+    --background: #ffffff;
+    --color: #343541;
+}
+
+ion-select {
+    --background: var(--light-background-color);
+    --color: var(--light-text-color);
+}
+
+/* Modo oscuro */
+.dark-theme ion-header,
+.dark-theme ion-toolbar {
+    --background: #343541;
+    --color: #ffffff;
+}
+
+.dark-theme ion-title {
+    color: #ff830f !important;
+    /* Mantener el color naranja */
+}
+
+.dark-theme ion-icon[slot="icon-only"][name="menu_outline"] {
+    color: #ff830f !important;
+    /* Mantener el color naranja */
+}
+
+.dark-theme ion-content {
+    --background: #444852;
+    color: #ffffff;
+}
+
+body.dark-theme ng-container ion-list {
+    --background: #343541 !important;
+    color: #ffffff;
+}
+
+
+.dark-theme ion-item,
+.dark-theme ion-card {
+    --background: #343541;
+    color: #ffffff;
+}
+
+.dark-theme ion-card {
+    --background: #343541 !important;
+
+}
+
+.dark-theme ion-list {
+    background-color: #444852;
+}
+
+body.dark-theme ion-menu ion-content {
+    --background: #444852 !important;
+    color: #ffffff;
+}
+
+
+.dark-theme ion-select {
+    --background: var(--dark-background-color);
+    --color: var(--dark-text-color);
+}
+
+
+/* Estilos adicionales */
+.errormessage {
+    color: red;
+    font-size: 2.5vw;
+}
+
+.nomFlotante {
+    color: #ff830f;
+}

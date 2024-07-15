@@ -1,0 +1,84 @@
+<ion-header [class]="isDarkMode ? 'dark-theme' : ''" *ngIf="rol === 'cliente'">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/homecli" style="--color: #ff830f;"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title [style.color]="isDarkMode ? '#ff830f' : ''">Reseñas</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleDarkMode()">
+        <ion-icon [name]="isDarkMode ? 'sunny-outline' : 'moon-outline'"
+          style="color: #ff830f; font-size: 24px;"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="log-out-outline" class="color-salir" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="rol === 'cliente'">
+  <!-- Utiliza [formGroup] y (ngSubmit) para manejar el formulario -->
+  <form [formGroup]="reviewForm" (ngSubmit)="enviarResena()">
+
+    <ion-item [class.dark-theme]="isDarkMode">
+      <ion-label>Calificación</ion-label>
+      <!-- Asegúrate de que el control de calificación no tenga ngModel -->
+      <ion-icon *ngFor="let star of stars; let i = index" [name]="star.icon" [style.color]="star.color"
+        (click)="calificar(i + 1)"></ion-icon>
+
+    </ion-item>
+
+    <ion-item [class.dark-theme]="isDarkMode" style="margin-top: 30px;">
+      <ion-label position="floating">Comentario</ion-label>
+      <!-- Utiliza formControlName para enlazar el control en el FormGroup -->
+      <ion-textarea formControlName="comentario" style="height: 10em;"></ion-textarea>
+    </ion-item>
+
+    <input type="hidden" #idEmpresaInput [value]="idEmpresa">
+    <input type="hidden" [value]="reviewForm.get('id_cliente')?.value || ''">
+
+    <ion-button [style.color]="isDarkMode ? '#fff' : '#fff'" type="submit" expand="block" name="submit">Enviar
+      Reseña</ion-button>
+
+  </form>
+
+  <ion-card *ngFor="let resena of reviews; let i = index" [class.dark-theme]="isDarkMode"
+    style="margin-top: 30px;">
+
+    <ion-card-content style="display: flex; flex-direction: column;">
+      <p>{{ resena.calificacion }} <ion-icon name="star" style="color: #ff830f;"></ion-icon></p>
+      <p class="comentario-preview" [class.expandido]="expandido">
+        {{ resena.comentario }}
+      </p>
+      <div style="margin-top: 5px; margin-left: auto; text-align: right;">
+        <a (click)="toggleExpansion()" *ngIf="!expandido && resena.comentario.length > 50">Ver más</a>
+        <a (click)="toggleExpansion()" *ngIf="expandido">Ver menos</a>
+      </div>
+    </ion-card-content>
+
+    <!-- Mostrar respuesta si existe -->
+    <ng-container *ngIf="resena.respuesta">
+      <p style="margin-left: 15px;">Restaurante<ion-icon style="margin-left: 5px;" name="person-outline"></ion-icon></p>
+      <p class="respuesta" [class.expandido]="expandidoRespuesta[i]">
+        {{ resena.respuesta }}
+      </p>
+
+      <div style="margin-top: 5px; margin-left: auto; text-align: right; margin-right: 15px;">
+        <a (click)="toggleExpansionRespuesta(i)" *ngIf="!expandidoRespuesta[i] && resena.respuesta.length > 50">
+          <ion-icon name="add-outline" size="small" style="vertical-align: middle;"></ion-icon>
+          Más
+        </a>
+        <a (click)="toggleExpansionRespuesta(i)" *ngIf="expandidoRespuesta[i]">
+          <ion-icon name="remove-outline" size="small" style="vertical-align: middle;"></ion-icon>
+          Menos
+        </a>
+      </div>
+    </ng-container>
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,68 @@
+<ion-header [class]="isDarkMode ? 'dark-theme' : ''" *ngIf="rol === 'administrador' || rol === 'encargado'">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/gestion-menu-carta" style="--color: #ff830f;"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title color="primary">Menús</ion-title>
+
+    <ion-buttons slot="end">
+
+      <ion-button (click)="toggleDarkMode()">
+        <ion-icon [name]="isDarkMode ? 'sunny-outline' : 'moon-outline'"
+          style="color: #ff830f; font-size: 24px;"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="log-out-outline" class="color-salir" size="large"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="rol === 'administrador' || rol === 'encargado'" class="center-content">
+
+  <!-- <label>Subir Menú</label> -->
+
+  <br>
+
+  <form [formGroup]="form">
+    <!-- Selector de día para asociar con la imagen -->
+    <ion-select type="select" formControlName="dia" [class.dark-theme]="isDarkMode" placeholder="Seleccione un día">
+      <ion-icon name="today-outline" slot="start" style="margin-right: 8px;"></ion-icon>
+      <ion-select-option *ngFor="let dia of dias" [value]="dia">
+        {{ dia }}
+      </ion-select-option>
+    </ion-select>
+
+    <!-- Campos ocultos para identificación de empresa y usuario -->
+    <input type="hidden" formControlName="id_empresa" [value]="id_empresa">
+    <input type="hidden" formControlName="id_user" [value]="id_user">
+
+    <!-- Sección para cargar imágenes -->
+    <div class="upload-row">
+      <input type="file" id="fileInput" accept="image/*" (change)="onFileSelected($event)" class="upload-input">
+      <ion-button (click)="uploadImage()" class="upload-button">Enviar</ion-button>
+    </div>
+
+    <!-- Galería de imágenes cargadas, condicionada por el rol -->
+    <div class="gallery-container" style="margin-left: 10px; margin-right: 25px;">
+      <!-- Iteración sobre menús para mostrar cada tarjeta de imagen -->
+      <ion-card *ngFor="let menu of menusFiltrados" class="card-container">
+        <img [src]="menu.menu_img" alt="{{ menu.menu_img }}" style="width: 100%;" />
+        <ion-card-header>
+          <!-- Título de la tarjeta mostrando el día asociado a la imagen -->
+          <ion-card-title class="card-title" [ngStyle]="{'color': isDarkMode ? 'white' : 'inherit'}">
+            {{ menu.dia ? '' + menu.dia : 'Día no especificado' }}
+          </ion-card-title>
+          <!-- Icono de papelera para borrar la imagen -->
+          <ion-icon name="trash-outline" style="font-size: 26px;color: #ff830f; margin-top: 5px;" (click)="borrarImg(menu.id_menu)"
+            class="trash-icon"></ion-icon>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </form>
+</ion-content>

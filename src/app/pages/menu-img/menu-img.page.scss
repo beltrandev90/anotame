@@ -1,0 +1,100 @@
+/* Hago que el título se centre en la página */
+ion-title {
+    text-align: center;
+}
+
+/* Estilo para el label de la clase center-content */
+.center-content label {
+    display: block; 
+    text-align: center; 
+    font-size: large; 
+    color: #ff830f; 
+    font-weight: bold; 
+    margin-top: 15px; 
+}
+
+.color-salir {
+    color: #ff830f;
+}
+
+/* Estilo para la fila de carga de imágenes */
+ion-select {
+    margin-left: 15px; 
+    margin-right: 15px; 
+}
+
+.upload-row {
+    display: flex; /* Hago que la fila sea un contenedor flexible */
+    align-items: center; /* Alineo los elementos al centro verticalmente */
+    margin-left: 8px; 
+    margin-right: 8px; 
+}
+
+.upload-input {
+    margin-left: 8px; 
+    margin-right: 8px; 
+}
+
+.upload-button {
+    width: 120px; 
+    margin-left: 15px; 
+    margin-right: 15px; 
+}
+
+/* Estilo para las tarjetas de contenido */
+.card-container {
+    width: 100%; 
+    max-width: 400px; 
+    margin-bottom: 50px; 
+    position: relative; 
+    text-align: center; 
+    overflow: hidden; /* Oculto el contenido que se desborda */
+}
+
+/* Estilo para imágenes dentro de las tarjetas */
+.card-image {
+    width: calc(100% - 12px); /* Calculo el ancho con margen */
+    height: auto; 
+    object-fit: contain; /* Hago que la imagen se ajuste dentro del contenedor */
+    margin: 10px auto; /* Añado margen alrededor */
+    max-height: 300px; /* Establezco una altura máxima */
+}
+
+/* Estilo para el encabezado de las tarjetas */
+ion-card-header {
+    text-align: center; 
+    overflow: visible; /* Hago que el contenido desbordado sea visible */
+    display: flex; /* Hago que el encabezado sea un contenedor flexible */
+    justify-content: space-between; /* Distribuyo el espacio entre los elementos */
+    align-items: center; 
+    white-space: nowrap; /* Evito el salto de línea en el texto */
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+}
+
+/* Estilo para el título de las tarjetas */
+.card-title {
+    font-size: 18px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: 2px; 
+}
+
+/* Icono de papelera con cursor de puntero */
+.trash-icon {
+    cursor: pointer; 
+    margin-left: 5px; 
+}
+
+/* Estilo para el modo oscuro del ion-select */
+.dark-theme ion-select {
+    --background: #444852; 
+    --color: #ffffff; 
+    --border-color: #ffffff; 
+}
+
+ion-icon {
+    margin-right: 5px;
+    font-size: 20px;
+    color: #ff830f;
+}
