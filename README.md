@@ -72,6 +72,48 @@ Para acceder a la aplicación, abre tu navegador web y visita:
 
 http://localhost:8100/inicio
 
+## 
+Capturas de Pantalla
+
+Aquí se muestran algunos ejemplos importantes de la aplicación. Estas capturas ilustran las principales funcionalidades y vistas del sistema.
+
+### Login
+![Login](images/login.png)
+*Pantalla de inicio de sesión.*
+
+### Registro
+![Registro](images/registro.png)
+*Pantalla de registro para nuevos usuarios.*
+
+### Registro Empresa
+![Registro Empresa](images/registroEmpresa.png)
+*Pantalla de registro para empresas.*
+
+### Menú
+![Menú](images/modoOscuro.png)
+*Vista del menú principal.*
+
+### Carta
+![Carta](images/carta.png)
+*Pantalla de la carta de productos o servicios.*
+
+### Reseñas
+![Reseñas](images/reseñas.png)
+*Pantalla de reseñas de usuarios.*
+
+### Reservas Cliente
+![Reservas Cliente](images/reservasCliente.png)
+*Pantalla de reservas desde la perspectiva del cliente.*
+
+![Reservas Cliente 2](images/reservasCliente2.png)
+*Otra vista de las reservas del cliente.*
+
+### Reservas del Establecimiento
+![Reservas User](images/reservasUser.png)
+*Pantalla de reservas vista por el personal del establecimiento.*
+
+La **descripción completa** y **guía de uso** de la aplicación se encuentran más abajo en este documento. Por favor, revisa las secciones correspondientes para obtener información detallada sobre cómo funciona la aplicación y cómo utilizarla.
+
 ###
 Registro de Usuarios
 
