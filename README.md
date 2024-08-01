@@ -23,45 +23,46 @@ Anotame es una aplicación para la gestión de reservas, diseñada principalment
 - **Horarios:** Información sobre los horarios de apertura y cierre del establecimiento.
 - **Reservas:** Los clientes pueden realizar reservas de manera sencilla a través de la aplicación.
 
-## 
-Capturas de Pantalla
 
-Aquí se muestran algunos ejemplos importantes de la aplicación. Estas capturas ilustran las principales funcionalidades y vistas del sistema.
+## Capturas de Pantalla
 
-## Login
+Aquí puedes ver algunas capturas de pantalla de la aplicación:
+
+### Carta
+![Carta](./images/carta.PNG)
+*Pantalla de visualización de la carta del establecimiento.*
+
+### Login
 ![Login](./images/login.PNG)
 *Pantalla de inicio de sesión.*
 
-## Registro
+### Modo Oscuro
+![Modo Oscuro](./images/modoOscuro.PNG)
+*Pantalla de la aplicación en modo oscuro.*
+
+### Registro
 ![Registro](./images/registro.PNG)
 *Pantalla de registro para nuevos usuarios.*
 
-## Registro Empresa
+### Registro Empresa
 ![Registro Empresa](./images/registroEmpresa.PNG)
 *Pantalla de registro para empresas.*
 
-## Menú
-![Menú](./images/modoOscuro.PNG)
-*Vista del menú principal.*
-
-## Carta
-![Carta](./images/carta.PNG)
-*Pantalla de la carta de productos o servicios.*
-
-## Reseñas
-![Reseñas](./images/reseñas.PNG)
-*Pantalla de reseñas de usuarios.*
-
-## Reservas Cliente
+### Reservas Cliente
 ![Reservas Cliente](./images/reservasCliente.PNG)
-*Pantalla de reservas desde la perspectiva del cliente.*
+*Pantalla de visualización de reservas para el cliente.*
 
+### Reservas Cliente 2
 ![Reservas Cliente 2](./images/reservasCliente2.PNG)
-*Otra vista de las reservas del cliente.*
+*Segunda pantalla de visualización de reservas para el cliente.*
 
-## Reservas del Establecimiento
-![Reservas User](./images/reservasUser.PNG)
-*Pantalla de reservas vista por el personal del establecimiento.*
+### Reservas Usuario
+![Reservas Usuario](./images/reservasUser.PNG)
+*Pantalla de visualización de reservas para el usuario.*
+
+### Reseñas
+![Reseñas](./images/reseñas.PNG)
+*Pantalla de reseñas de los clientes.*
 
 La **descripción completa** y **guía de uso** de la aplicación se encuentran más abajo en este documento. Por favor, revisa las secciones correspondientes para obtener información detallada sobre cómo funciona la aplicación y cómo utilizarla.
 
