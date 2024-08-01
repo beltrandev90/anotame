@@ -22,6 +22,49 @@ Anotame es una aplicación para la gestión de reservas, diseñada principalment
 - **Descripción del Local:** Los clientes pueden leer una descripción detallada del local.
 - **Horarios:** Información sobre los horarios de apertura y cierre del establecimiento.
 - **Reservas:** Los clientes pueden realizar reservas de manera sencilla a través de la aplicación.
+
+## 
+Capturas de Pantalla
+
+Aquí se muestran algunos ejemplos importantes de la aplicación. Estas capturas ilustran las principales funcionalidades y vistas del sistema.
+
+## Login
+![Login](./images/login.PNG)
+*Pantalla de inicio de sesión.*
+
+## Registro
+![Registro](./images/registro.PNG)
+*Pantalla de registro para nuevos usuarios.*
+
+## Registro Empresa
+![Registro Empresa](./images/registroEmpresa.PNG)
+*Pantalla de registro para empresas.*
+
+## Menú
+![Menú](./images/modoOscuro.PNG)
+*Vista del menú principal.*
+
+## Carta
+![Carta](./images/carta.PNG)
+*Pantalla de la carta de productos o servicios.*
+
+## Reseñas
+![Reseñas](./images/reseñas.PNG)
+*Pantalla de reseñas de usuarios.*
+
+## Reservas Cliente
+![Reservas Cliente](./images/reservasCliente.PNG)
+*Pantalla de reservas desde la perspectiva del cliente.*
+
+![Reservas Cliente 2](./images/reservasCliente2.PNG)
+*Otra vista de las reservas del cliente.*
+
+## Reservas del Establecimiento
+![Reservas User](./images/reservasUser.PNG)
+*Pantalla de reservas vista por el personal del establecimiento.*
+
+La **descripción completa** y **guía de uso** de la aplicación se encuentran más abajo en este documento. Por favor, revisa las secciones correspondientes para obtener información detallada sobre cómo funciona la aplicación y cómo utilizarla.
+
 ## Tabla de Contenidos
 - [Instalación](#instalación)
 - [Uso](#uso)
@@ -71,48 +114,6 @@ Acceso a la Aplicación
 Para acceder a la aplicación, abre tu navegador web y visita:
 
 http://localhost:8100/inicio
-
-## 
-Capturas de Pantalla
-
-Aquí se muestran algunos ejemplos importantes de la aplicación. Estas capturas ilustran las principales funcionalidades y vistas del sistema.
-
-### Login
-![Login](images/login.PNG)
-*Pantalla de inicio de sesión.*
-
-### Registro
-![Registro](images/registro.PNG)
-*Pantalla de registro para nuevos usuarios.*
-
-### Registro Empresa
-![Registro Empresa](images/registroEmpresa.PNG)
-*Pantalla de registro para empresas.*
-
-### Menú
-![Menú](images/modoOscuro.PNG)
-*Vista del menú principal.*
-
-### Carta
-![Carta](images/carta.PNG)
-*Pantalla de la carta de productos o servicios.*
-
-### Reseñas
-![Reseñas](images/reseñas.PNG)
-*Pantalla de reseñas de usuarios.*
-
-### Reservas Cliente
-![Reservas Cliente](images/reservasCliente.PNG)
-*Pantalla de reservas desde la perspectiva del cliente.*
-
-![Reservas Cliente 2](images/reservasCliente2.PNG)
-*Otra vista de las reservas del cliente.*
-
-### Reservas del Establecimiento
-![Reservas User](images/reservasUser.PNG)
-*Pantalla de reservas vista por el personal del establecimiento.*
-
-La **descripción completa** y **guía de uso** de la aplicación se encuentran más abajo en este documento. Por favor, revisa las secciones correspondientes para obtener información detallada sobre cómo funciona la aplicación y cómo utilizarla.
 
 ###
 Registro de Usuarios
