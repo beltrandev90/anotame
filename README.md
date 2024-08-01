@@ -36,9 +36,9 @@ Aquí puedes ver algunas capturas de pantalla de la aplicación:
 ![Login](./images/login.PNG)
 *Pantalla de inicio de sesión.*
 
-### Modo Oscuro
-![Modo Oscuro](./images/modoOscuro.PNG)
-*Pantalla de la aplicación en modo oscuro.*
+### Menú
+![Menú](./images/modoOscuro.PNG)
+*Visualización del menú principal.*
 
 ### Registro
 ![Registro](./images/registro.PNG)
