@@ -29,40 +29,40 @@ Anotame es una aplicación para la gestión de reservas, diseñada principalment
 Aquí puedes ver algunas capturas de pantalla de la aplicación:
 
 ### Registro
-*Pantalla de registro para nuevos usuarios.*
 ![Registro](./images/registro.PNG)
+*Pantalla de registro para nuevos usuarios.*
 
 ### Registro Empresa
-*Pantalla de registro para empresas.*
 ![Registro Empresa](./images/registroEmpresa.PNG)
+*Pantalla de registro para empresas.*
 
 ### Login
-*Pantalla de inicio de sesión.*
 ![Login](./images/login.PNG)
+*Pantalla de inicio de sesión.*
 
 ### Menú
-*Visualización del menú principal.*
 ![Menú](./images/modoOscuro.PNG)
+*Visualización del menú principal.*
 
 ### Carta
-*Pantalla de visualización de la carta del establecimiento.*
 ![Carta](./images/carta.PNG)
+*Pantalla de visualización de la carta del establecimiento.*
 
 ### Reservas Cliente
-*Pantalla de visualización de reservas para el cliente.*
 ![Reservas Cliente](./images/reservasCliente.PNG)
+*Pantalla de visualización de reservas para el cliente.*
 
 ### Reservas Cliente 2
-*Segunda pantalla de visualización de reservas para el cliente.*
 ![Reservas Cliente 2](./images/reservasCliente2.PNG)
+*Segunda pantalla de visualización de reservas para el cliente.*
 
 ### Reservas del Restaurante
-*Pantalla de visualización de reservas para el restaurante.*
 ![Reservas Usuario](./images/reservasUser.PNG)
+*Pantalla de visualización de reservas para el restaurante.*
 
 ### Reseñas
-*Pantalla de reseñas de los clientes.*
 ![Reseñas](./images/reseñas.PNG)
+*Pantalla de reseñas de los clientes.*
 
 La **descripción completa** y **guía de uso** de la aplicación se encuentran más abajo en este documento. Por favor, revisa las secciones correspondientes para obtener información detallada sobre cómo funciona la aplicación y cómo utilizarla.
 
