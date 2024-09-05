@@ -6,7 +6,7 @@
 Anotame es una aplicación para la gestión de reservas, diseñada principalmente para bares y restaurantes. Esta herramienta permite a los establecimientos organizar sus reservas de manera eficiente y brindar un mejor servicio a sus clientes.
 
 ## Tabla de Contenidos
-- [Características].(#características).
+- [Características](#características)
 - [Capturas de Pantalla](#capturas-de-pantalla)
 - [Instalación](#instalación)
 - [Uso](#uso)
