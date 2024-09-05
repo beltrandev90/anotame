@@ -5,6 +5,17 @@
 
 Anotame es una aplicación para la gestión de reservas, diseñada principalmente para bares y restaurantes. Esta herramienta permite a los establecimientos organizar sus reservas de manera eficiente y brindar un mejor servicio a sus clientes.
 
+## Tabla de Contenidos
+- [Características].(#características).
+- [Capturas de Pantalla](#capturas-de-pantalla)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
+
 ### Características para Restaurantes
 
 - **Gestión de Trabajadores:** Permite agregar trabajadores con diferentes roles, como encargado o camarero.
@@ -66,15 +77,7 @@ Aquí puedes ver algunas capturas de pantalla de la aplicación:
 
 La **descripción completa** y **guía de uso** de la aplicación se encuentran más abajo en este documento. Por favor, revisa las secciones correspondientes para obtener información detallada sobre cómo funciona la aplicación y cómo utilizarla.
 
-## Tabla de Contenidos
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Capturas de Pantalla](#capturas-de-pantalla)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
+
 ### Instrucciones de Instalación
 
 #### Requisitos Previos
@@ -121,7 +124,6 @@ Registro de Usuarios
 
 Al crear una cuenta en la aplicación, asegúrate de que las contraseñas tengan al menos 6 caracteres y puedan incluir números, letras y caracteres especiales.
 
-css
 ## Uso
 
 ### Registro y Gestión del Establecimiento por el Propietario/Administrador
@@ -241,7 +243,9 @@ git push origin feature/nueva-funcionalidad
 
 6.
 **Enviar un Pull Request**
-Ve a tu repositorio en GitHub y crea un Pull Request para que tus cambios sean revisados e incorporados al proyecto principal.## Licencia
+Ve a tu repositorio en GitHub y crea un Pull Request para que tus cambios sean revisados e incorporados al proyecto principal.
+
+## Licencia
 
 Este proyecto está licenciado bajo los términos de la [Licencia MIT](https://opensource.org/licenses/MIT).
 
